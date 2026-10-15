@@ -61,8 +61,8 @@ body:before{
 .title{font-size:23px;font-weight:900;color:var(--blue);margin:0 0 8px}
 .intro{margin:0 0 17px;font-size:15px;line-height:1.7}
 .design-label{font-weight:900;font-size:14px;margin:0 0 8px}
-.designs{display:flex;gap:8px;margin-bottom:16px}
-.designs label{flex:1;cursor:pointer}
+.designs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.designs label{flex:1 1 28%;min-width:0;cursor:pointer}
 .designs input{position:absolute;opacity:0}
 .chip{
   display:block;text-align:center;padding:10px;border-radius:12px;
@@ -129,9 +129,40 @@ button{border:0;border-radius:14px;padding:13px;cursor:pointer;font-weight:900}
  .q h3{font-size:15px}.help-grid{grid-template-columns:1fr}.help-item.wide{grid-column:auto}
  .buttons{flex-direction:column}.survey{padding:18px 13px}.survey a{width:100%}
 }
+
+/* Full-page color themes */
+body.theme-green{--blue:#356b55;--light-blue:#e3f2e8;--cream:#fff4d9;--lav:#eaf4dc;--purple:#477b5c;--pink:#9bc9a6;--line:#b9d8c1;--text:#456b58;--muted:#789785;background:linear-gradient(180deg,#cce9d4,#eff9f0 20%,#fffaf0 52%,#e7f4e9 82%,#d3ead9)}
+body.theme-lav{--blue:#67509a;--light-blue:#ece8ff;--cream:#fff1e8;--lav:#e8e0ff;--purple:#7657b5;--pink:#c8a6ed;--line:#d4c8f0;--text:#665785;--muted:#9384b1;background:linear-gradient(180deg,#e0d7ff,#f5f0ff 20%,#fffaf7 52%,#f0eaff 82%,#e0d7ff)}
+body.theme-peach{--blue:#a6533f;--light-blue:#ffe8dc;--cream:#fff0d4;--lav:#ffe4e8;--purple:#b45b68;--pink:#f2b5a0;--line:#f1c5b5;--text:#885b50;--muted:#b18b7f;background:linear-gradient(180deg,#ffd9c9,#fff0e7 20%,#fffaf1 52%,#ffe9df 82%,#ffd9c9)}
+body.theme-rose{--blue:#9d426d;--light-blue:#ffe8f1;--cream:#fff1df;--lav:#f9e4f2;--purple:#ad4f85;--pink:#ed9ec4;--line:#f0c4da;--text:#8d5874;--muted:#b78aa2;background:linear-gradient(180deg,#f8cfe2,#fff0f6 20%,#fffaf7 52%,#fbe7f1 82%,#f8cfe2)}
+body.theme-night{--blue:#314b79;--light-blue:#e0e9ff;--cream:#fff0d2;--lav:#e8e4ff;--purple:#5267a6;--pink:#9caee8;--line:#c1cce9;--text:#435779;--muted:#7889ad;background:linear-gradient(180deg,#c7d4f1,#eaf0ff 20%,#fffaf2 52%,#e4eaff 82%,#c7d4f1)}
+body.theme-green .hero .logo,body.theme-green .title,body.theme-green .preview-title{color:#356b55}
+body.theme-lav .hero .logo,body.theme-lav .title,body.theme-lav .preview-title{color:#67509a}
+body.theme-peach .hero .logo,body.theme-peach .title,body.theme-peach .preview-title{color:#a6533f}
+body.theme-rose .hero .logo,body.theme-rose .title,body.theme-rose .preview-title{color:#9d426d}
+body.theme-night .hero .logo,body.theme-night .title,body.theme-night .preview-title{color:#314b79}
+body.theme-green .hero .logo small,body.theme-green .hero .message span{color:#477b5c}
+body.theme-lav .hero .logo small,body.theme-lav .hero .message span{color:#7657b5}
+body.theme-peach .hero .logo small,body.theme-peach .hero .message span{color:#b45b68}
+body.theme-rose .hero .logo small,body.theme-rose .hero .message span{color:#ad4f85}
+body.theme-night .hero .logo small,body.theme-night .hero .message span{color:#5267a6}
+body.theme-green .panel{border-color:#b9d8c1} body.theme-lav .panel{border-color:#d4c8f0} body.theme-peach .panel{border-color:#f1c5b5} body.theme-rose .panel{border-color:#f0c4da} body.theme-night .panel{border-color:#c1cce9}
+body.theme-green .preview-panel,body.theme-green .card-area{background:#edf7ef} body.theme-lav .preview-panel,body.theme-lav .card-area{background:#f1edff} body.theme-peach .preview-panel,body.theme-peach .card-area{background:#fff0e7} body.theme-rose .preview-panel,body.theme-rose .card-area{background:#fff0f6} body.theme-night .preview-panel,body.theme-night .card-area{background:#e8edfb}
+body.theme-green .survey{background:linear-gradient(100deg,#e5f5e9,#f4faef);border-color:#b9d8c1} body.theme-lav .survey{background:linear-gradient(100deg,#f0eaff,#f9f1ff);border-color:#d4c8f0} body.theme-peach .survey{background:linear-gradient(100deg,#fff0e5,#fff7e7);border-color:#f1c5b5} body.theme-rose .survey{background:linear-gradient(100deg,#ffedf5,#fff2fa);border-color:#f0c4da} body.theme-night .survey{background:linear-gradient(100deg,#e7edff,#f3f4ff);border-color:#c1cce9}
+body.theme-green .survey h2{color:#356b55} body.theme-lav .survey h2{color:#67509a} body.theme-peach .survey h2{color:#a6533f} body.theme-rose .survey h2{color:#9d426d} body.theme-night .survey h2{color:#314b79}
+body.theme-green .survey a,body.theme-green .save{background:linear-gradient(135deg,#6eae83,#397456)} body.theme-lav .survey a,body.theme-lav .save{background:linear-gradient(135deg,#a38ae0,#7054b5)} body.theme-peach .survey a,body.theme-peach .save{background:linear-gradient(135deg,#e69a7c,#b85c4d)} body.theme-rose .survey a,body.theme-rose .save{background:linear-gradient(135deg,#e88bb6,#a8457a)} body.theme-night .survey a,body.theme-night .save{background:linear-gradient(135deg,#7e95d4,#435c9c)}
+body.theme-green .card-top{background:#d8eddd!important} body.theme-lav .card-top{background:#e1d8ff!important} body.theme-peach .card-top{background:#ffdccc!important} body.theme-rose .card-top{background:#f9d8e8!important} body.theme-night .card-top{background:#d7e1ff!important}
+body.theme-green .row.happy{background:#fff1cf} body.theme-green .row.sos{background:#e5f0d9} body.theme-green .row.person{background:#dff0e4}
+body.theme-lav .row.happy{background:#fff0e3} body.theme-lav .row.sos{background:#e8e0ff} body.theme-lav .row.person{background:#e5eaff}
+body.theme-peach .row.happy{background:#fff0d5} body.theme-peach .row.sos{background:#ffe0e7} body.theme-peach .row.person{background:#ffe5d9}
+body.theme-rose .row.happy{background:#fff0d9} body.theme-rose .row.sos{background:#f8e0f0} body.theme-rose .row.person{background:#ffe3ef}
+body.theme-night .row.happy{background:#fff0d7} body.theme-night .row.sos{background:#e8e3ff} body.theme-night .row.person{background:#dfe9ff}
+body.theme-green .help{background:#edf7ef;border-color:#c7e1cc} body.theme-lav .help{background:#f1edff;border-color:#d9cef4} body.theme-peach .help{background:#fff0e7;border-color:#f3cdbd} body.theme-rose .help{background:#fff0f6;border-color:#f2c8dc} body.theme-night .help{background:#e8edfb;border-color:#cbd5f0}
+body.theme-green .help-title,body.theme-green .help-number,body.theme-green .card-bottom{color:#397456} body.theme-lav .help-title,body.theme-lav .help-number,body.theme-lav .card-bottom{color:#7054b5} body.theme-peach .help-title,body.theme-peach .help-number,body.theme-peach .card-bottom{color:#b85c4d} body.theme-rose .help-title,body.theme-rose .help-number,body.theme-rose .card-bottom{color:#a8457a} body.theme-night .help-title,body.theme-night .help-number,body.theme-night .card-bottom{color:#435c9c}
+
 </style>
 </head>
-<body>
+<body class="theme-sky">
 <div class="wrap">
 
 <header class="hero">
@@ -151,8 +182,11 @@ button{border:0;border-radius:14px;padding:13px;cursor:pointer;font-weight:900}
   <p class="design-label">🎨 카드 디자인을 선택해보세요</p>
   <div class="designs">
     <label><input type="radio" name="design" value="sky" checked><span class="chip">하늘빛</span></label>
-    <label><input type="radio" name="design" value="green"><span class="chip">초록빛</span></label>
+    <label><input type="radio" name="design" value="green"><span class="chip">숲속 민트</span></label>
     <label><input type="radio" name="design" value="lav"><span class="chip">라벤더</span></label>
+    <label><input type="radio" name="design" value="peach"><span class="chip">살구 코랄</span></label>
+    <label><input type="radio" name="design" value="rose"><span class="chip">로즈 핑크</span></label>
+    <label><input type="radio" name="design" value="night"><span class="chip">밤하늘</span></label>
   </div>
 
   <div class="q happy">
@@ -189,7 +223,7 @@ button{border:0;border-radius:14px;padding:13px;cursor:pointer;font-weight:900}
         <div class="row person"><b>👥 나를 지켜주는 사람 또는 장소</b><div id="pPerson">언제든 연락할 수 있는 친구</div></div>
 
         <div class="help">
-          <div class="help-title">♡ 도움이 필요할 때</div>
+          <div class="help-title">도움이 필요할 때</div>
           <div class="help-grid">
             <div class="help-item">
               <div class="help-name">자살예방상담전화</div>
@@ -208,7 +242,7 @@ button{border:0;border-radius:14px;padding:13px;cursor:pointer;font-weight:900}
             </div>
           </div>
         </div>
-        <div class="card-bottom">당신의 마음은 소중합니다. 혼자 감당하지 않아도 괜찮아요. 💖</div>
+        <div class="card-bottom">당신의 마음은 소중합니다.<br>혼자 감당하지 않아도 괜찮아요 💕</div>
       </div>
     </div>
   </div>
@@ -233,22 +267,16 @@ const data={
 Object.values(data).forEach(x=>{
  x.input.addEventListener("input",()=>x.preview.textContent=x.input.value.trim()||x.default);
 });
+const themeNames=["sky","green","lav","peach","rose","night"];
 document.querySelectorAll('input[name="design"]').forEach(r=>{
- r.addEventListener("change",()=>{
-   const card=document.getElementById("captureCard");
-   card.classList.remove("green","lav");
-   if(r.value==="green")card.classList.add("green");
-   if(r.value==="lav")card.classList.add("lav");
-   applyDesign();
- });
+  r.addEventListener("change",()=>{
+    document.body.classList.remove(...themeNames.map(x=>"theme-"+x));
+    document.body.classList.add("theme-"+r.value);
+    const card=document.getElementById("captureCard");
+    card.classList.remove(...themeNames);
+    if(r.value!=="sky") card.classList.add(r.value);
+  });
 });
-function applyDesign(){
- const card=document.getElementById("captureCard");
- const green=card.classList.contains("green"), lav=card.classList.contains("lav");
- const top=card.querySelector(".card-top");
- top.style.background=green?"#e5f4ea":lav?"#eee8ff":"#dff2ff";
- top.querySelector("h2").style.color=green?"#39745a":lav?"#6b54b4":"#315fa8";
-}
 function resetCard(){
  Object.values(data).forEach(x=>{x.input.value="";x.preview.textContent=x.default});
  document.querySelector('input[value="sky"]').checked=true;
